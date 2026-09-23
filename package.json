@@ -1,0 +1,14 @@
+{
+  "name": "hisabati",
+  "version": "1.0.0",
+  "description": "حساباتي - دفتر حسابات",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo Build complete"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.4.3",
+    "@capacitor/cli": "^7.4.3",
+    "@capacitor/core": "^7.4.3"
+  }
+}
