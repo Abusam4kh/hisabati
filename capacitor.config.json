@@ -1,5 +1,13 @@
 {
   "appId": "com.hisabati.app",
   "appName": "حساباتي",
-  "webDir": "www"
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  },
+  "plugins": {
+    "CapacitorSQLite": {
+      "androidIsEncryption": false
+    }
+  }
 }
