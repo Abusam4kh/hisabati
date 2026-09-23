@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -31,7 +32,7 @@ jobs:
           distribution: temurin
           java-version: '21'
 
-      - name: Check Java version
+      - name: Check Java
         run: java -version
 
       - name: Build APK
