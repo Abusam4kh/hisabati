@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f6f8;
+    color: #222;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 50px;
+    font-size: 36px;
+}
+
+p {
+    font-size: 20px;
+}
+
+button {
+    width: 100%;
+    padding: 16px;
+    margin-top: 30px;
+    border: none;
+    border-radius: 12px;
+    background: #1976d2;
+    color: white;
+    font-size: 20px;
+}
