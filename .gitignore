@@ -1,0 +1,13 @@
+# Flutter
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+build/
+coverage/
+.idea/
+*.iml
+.metadata
+pubspec.lock
+android/.gradle/
+android/local.properties
