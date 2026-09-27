@@ -1,0 +1,46 @@
+name: Build حساباتي APK
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "hasabati_project.zip"
+      - ".github/workflows/build-from-zip.yml"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Extract project
+        run: |
+          mkdir -p app
+          unzip -q hasabati_project.zip -d app
+          if [ -d "app/hasabati_fixed" ]; then
+            shopt -s dotglob
+            cp -R app/hasabati_fixed/* app/
+            rm -rf app/hasabati_fixed
+          fi
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: "3.38.1"
+          channel: stable
+          cache: true
+
+      - name: Flutter pub get
+        working-directory: app
+        run: flutter pub get
+
+      - name: Build APK
+        working-directory: app
+        run: flutter build apk --release
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: حساباتي-apk
+          path: app/build/app/outputs/flutter-apk/app-release.apk
