@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - "hasabati_pro_v2.zip"
+      - "hasabati_project.zip"
       - ".github/workflows/build-from-zip.yml"
 
 jobs:
